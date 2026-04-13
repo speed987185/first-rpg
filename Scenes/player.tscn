@@ -1102,10 +1102,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gymyn"]
-radius = 97.0
-height = 292.0
+radius = 65.0
+height = 130.0
 
 [node name="Player" type="CharacterBody2D" unique_id=1157953690]
+scale = Vector2(0.1, 0.1)
 script = ExtResource("1_gymyn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1099185033]
@@ -1115,5 +1116,5 @@ autoplay = "front_idle"
 frame_progress = 0.8372064
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1388316579]
-position = Vector2(3, -7)
+position = Vector2(-1, 69)
 shape = SubResource("CapsuleShape2D_gymyn")
