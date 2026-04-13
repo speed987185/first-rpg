@@ -11,14 +11,18 @@ config_version=5
 [application]
 
 config/name="FirstRpg"
+run/main_scene="uid://7x1e5o8dds3w"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://Assets/icon.svg"
+
+[autoload]
+
+SceneTransition="*uid://c4ol3pxmv6jnn"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/size/mode=3
 window/stretch/scale=0.5
 
 [editor_plugins]
