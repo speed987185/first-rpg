@@ -1966,8 +1966,16 @@ layer_5/tile_data = PackedInt32Array(-1835068, 4, 0, -1769532, 4, 1, -1703996, 4
 z_index = 10
 position = Vector2(54, 48)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=468360042]
+[node name="Camera2D2" type="Camera2D" parent="Player" unique_id=236920450]
 zoom = Vector2(10, 10)
+limit_left = -15
+limit_top = -33
+limit_right = 430
+limit_bottom = 254
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=117326312]
 
