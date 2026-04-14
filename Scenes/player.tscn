@@ -1105,8 +1105,12 @@ animations = [{
 radius = 65.0
 height = 130.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_gymyn"]
+radius = 210.23795
+
 [node name="Player" type="CharacterBody2D" unique_id=1157953690]
 scale = Vector2(0.1, 0.1)
+collision_layer = 3
 script = ExtResource("1_gymyn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1099185033]
@@ -1118,3 +1122,8 @@ frame_progress = 0.8372064
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1388316579]
 position = Vector2(-1, 69)
 shape = SubResource("CapsuleShape2D_gymyn")
+
+[node name="player_hitbox" type="Area2D" parent="." unique_id=494757617]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox" unique_id=1618628548]
+shape = SubResource("CircleShape2D_gymyn")

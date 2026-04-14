@@ -1967,7 +1967,7 @@ z_index = 10
 position = Vector2(54, 48)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=468360042]
-zoom = Vector2(15, 15)
+zoom = Vector2(10, 10)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=117326312]
 
