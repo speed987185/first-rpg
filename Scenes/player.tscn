@@ -1115,9 +1115,8 @@ script = ExtResource("1_gymyn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1099185033]
 sprite_frames = SubResource("SpriteFrames_5w755")
-animation = &"front_idle"
+animation = &"side_attack"
 autoplay = "front_idle"
-frame_progress = 0.8372064
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1388316579]
 position = Vector2(-1, 69)
@@ -1127,3 +1126,14 @@ shape = SubResource("CapsuleShape2D_gymyn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox" unique_id=1618628548]
 shape = SubResource("CircleShape2D_gymyn")
+
+[node name="attack_cooldown" type="Timer" parent="." unique_id=464452280]
+wait_time = 2.0
+
+[node name="deal_attack_timer" type="Timer" parent="." unique_id=1950027830]
+wait_time = 0.3
+
+[connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
+[connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
+[connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
+[connection signal="timeout" from="deal_attack_timer" to="." method="_on_deal_attack_timer_timeout"]
