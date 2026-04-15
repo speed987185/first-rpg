@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c1lfj3v3nqibe" path="res://Scripts/wave2bossS.gd" id="1_mobdf"]
 [ext_resource type="PackedScene" uid="uid://dc6atcj86ws8c" path="res://Scenes/player.tscn" id="2_hjpx7"]
 [ext_resource type="PackedScene" uid="uid://d1g1eb237ygsf" path="res://Scenes/wave_1_boss.tscn" id="3_4cs1d"]
+[ext_resource type="PackedScene" uid="uid://bo6t1jdc1op3g" path="res://Scenes/wave_1_ene.tscn" id="5_6slmd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hjpx7"]
 texture = ExtResource("1_8lgsf")
@@ -182,5 +183,14 @@ shape = SubResource("CircleShape2D_4cs1d")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NextScene" unique_id=892622584]
 position = Vector2(872, 300)
 shape = SubResource("CircleShape2D_mobdf")
+
+[node name="wave1ene" parent="." unique_id=2006594796 instance=ExtResource("5_6slmd")]
+position = Vector2(687, 322)
+
+[node name="wave1ene2" parent="." unique_id=61521678 instance=ExtResource("5_6slmd")]
+position = Vector2(734, 291)
+
+[node name="wave1ene3" parent="." unique_id=734271670 instance=ExtResource("5_6slmd")]
+position = Vector2(772, 320)
 
 [connection signal="body_entered" from="Back" to="." method="_on_back_body_entered"]
