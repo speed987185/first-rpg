@@ -4,12 +4,12 @@ var speed = 40
 var player_chase = false
 var player = null
 
-var health = 200
+var health = 100
 var player_inattack_zone = false
 var can_take_damage = true
 
 func _physics_process(delta):
-	
+	update_health()
 	deal_with_damage()
 	
 	if player_chase:
@@ -65,6 +65,7 @@ func deal_with_damage():
 			can_take_damage = false
 		print("enemy health = ", health)
 		if health <= 0:
+			get_tree
 			self.queue_free()
 			
 		
@@ -72,3 +73,11 @@ func deal_with_damage():
 
 func _on_take_damage_cooldown_timeout() -> void:
 	can_take_damage = true
+	
+func update_health():
+	var healthbar = $healthbar
+	
+	if health >= 100:
+		healthbar.visible = false
+	else:
+		healthbar.visible = true

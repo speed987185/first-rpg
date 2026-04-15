@@ -15,4 +15,4 @@ func _on_next_body_entered(body: Node2D) -> void:
 	if body.name != "Player":
 		return
 		
-	SceneTransition.change_scene_to("res://Scenes/wave_1_boss_f.tscn")
+	SceneTransition.change_scene_to("res://Scenes/wave_2_boss_f.tscn")
