@@ -11,9 +11,8 @@ func _on_back_body_entered(body: Node2D) -> void:
 	SceneTransition.change_scene_to("res://Scenes/wave1.tscn")
 
 
-func _on_next_scene_body_entered(body: Node2D) -> void:
+func _on_next_body_entered(body: Node2D) -> void:
 	if body.name != "Player":
 		return
-	
-	SceneTransition.change_scene_to("res://Scenes/wave_2.tscn")
-	
+		
+	SceneTransition.change_scene_to("res://Scenes/wave_1_boss_f.tscn")

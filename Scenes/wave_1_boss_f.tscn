@@ -194,3 +194,4 @@ position = Vector2(734, 291)
 position = Vector2(772, 320)
 
 [connection signal="body_entered" from="Back" to="." method="_on_back_body_entered"]
+[connection signal="body_entered" from="NextScene" to="." method="_on_next_scene_body_entered"]
