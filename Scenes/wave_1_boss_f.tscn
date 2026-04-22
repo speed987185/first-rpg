@@ -193,5 +193,12 @@ position = Vector2(734, 291)
 [node name="wave1ene3" parent="." unique_id=734271670 instance=ExtResource("5_6slmd")]
 position = Vector2(772, 320)
 
+[node name="Label" type="Label" parent="." unique_id=1861393131]
+offset_left = 376.0
+offset_top = 233.0
+offset_right = 485.0
+offset_bottom = 252.0
+text = "meet  your friend"
+
 [connection signal="body_entered" from="Back" to="." method="_on_back_body_entered"]
 [connection signal="body_entered" from="NextScene" to="." method="_on_next_scene_body_entered"]

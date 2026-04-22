@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://vevtdmni3rbm" path="res://Assets/Player/Right - Attacking.png" id="9_fs7ks"]
 [ext_resource type="Texture2D" uid="uid://cs7qxcesnjqpt" path="res://Assets/Player/Right - Idle.png" id="10_l6n3p"]
 [ext_resource type="Texture2D" uid="uid://cdqu36n35tsw5" path="res://Assets/Player/Right - Walking.png" id="11_olqyp"]
+[ext_resource type="AudioStream" uid="uid://cuauc10on4yeg" path="res://Assets/Sfx/footstep.mp3" id="12_footstep"]
+[ext_resource type="AudioStream" uid="uid://rpgeb0rdbjqo" path="res://Assets/Sfx/attack.mp3" id="13_attack"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wpjfl"]
 atlas = ExtResource("2_pu2lt")
@@ -1133,6 +1135,8 @@ wait_time = 2.0
 [node name="deal_attack_timer" type="Timer" parent="." unique_id=1950027830]
 wait_time = 0.3
 
+[node name="footstep_timer" type="Timer" parent="." unique_id=2000000001]
+
 [node name="healthbar" type="ProgressBar" parent="." unique_id=172476760]
 offset_left = -100.0
 offset_top = 160.0
@@ -1142,9 +1146,17 @@ show_percentage = false
 
 [node name="regin_timer" type="Timer" parent="." unique_id=388841447]
 wait_time = 5.0
+autostart = true
+
+[node name="FootstepAudio" type="AudioStreamPlayer2D" parent="." unique_id=2100000000]
+stream = ExtResource("12_footstep")
+
+[node name="AttackAudio" type="AudioStreamPlayer2D" parent="." unique_id=-2094967296]
+stream = ExtResource("13_attack")
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
 [connection signal="timeout" from="attack_cooldown" to="." method="_on_attack_cooldown_timeout"]
 [connection signal="timeout" from="deal_attack_timer" to="." method="_on_deal_attack_timer_timeout"]
+[connection signal="timeout" from="footstep_timer" to="." method="_on_footstep_timer_timeout"]
 [connection signal="timeout" from="regin_timer" to="." method="_on_regin_timer_timeout"]

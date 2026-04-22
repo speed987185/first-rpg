@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d130mtedpffyk" path="res://Scripts/wave_1_ene.gd" id="1_6wp75"]
 [ext_resource type="Texture2D" uid="uid://c5g3u11wno7p8" path="res://Assets/enemies/slime.png" id="1_vc6nf"]
+[ext_resource type="AudioStream" uid="uid://enemy_hurt_audio" path="res://Assets/Sfx/enemy_hurt.mp3" id="2_enemy_hurt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6wp75"]
 atlas = ExtResource("1_vc6nf")
@@ -174,6 +175,9 @@ offset_right = 7.0
 offset_bottom = 5.0
 value = 100.0
 show_percentage = false
+
+[node name="HurtAudio" type="AudioStreamPlayer2D" parent="." unique_id=2000000004]
+stream = ExtResource("2_enemy_hurt")
 
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]

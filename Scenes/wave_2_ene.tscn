@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dgdqmsnwf3w5t" path="res://Scripts/wave_2_ene.gd" id="1_3pf74"]
 [ext_resource type="Texture2D" uid="uid://b1b1jnmr2xaee" path="res://Assets/enemies/horse.png" id="2_7h6tk"]
+[ext_resource type="AudioStream" uid="uid://enemy_hurt_audio" path="res://Assets/Sfx/enemy_hurt.mp3" id="3_enemy_hurt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2noc"]
 atlas = ExtResource("2_7h6tk")

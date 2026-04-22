@@ -3035,5 +3035,21 @@ position = Vector2(715, 302)
 position = Vector2(794, 236)
 shape = SubResource("CircleShape2D_1exqa")
 
+[node name="Label" type="Label" parent="." unique_id=1219538982]
+offset_left = 296.0
+offset_top = 163.0
+offset_right = 446.0
+offset_bottom = 182.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "they are nothing for you"
+
+[node name="Label2" type="Label" parent="." unique_id=325166129]
+offset_left = 584.0
+offset_top = 178.0
+offset_right = 769.0
+offset_bottom = 197.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "someone special wating for you"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="NextScene" to="." method="_on_next_scene_body_entered"]

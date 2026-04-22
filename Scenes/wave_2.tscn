@@ -892,5 +892,12 @@ position = Vector2(792, 383)
 position = Vector2(213, -17)
 shape = SubResource("CircleShape2D_x46gj")
 
+[node name="Label" type="Label" parent="." unique_id=672806451]
+offset_left = 433.0
+offset_top = 289.0
+offset_right = 607.0
+offset_bottom = 308.0
+text = "sign to someone tuff is there"
+
 [connection signal="body_entered" from="back" to="." method="_on_back_body_entered"]
 [connection signal="body_entered" from="next" to="." method="_on_next_body_entered"]

@@ -1983,4 +1983,19 @@ drag_vertical_enabled = true
 position = Vector2(422, 174)
 shape = SubResource("CircleShape2D_wyo6c")
 
+[node name="Label" type="Label" parent="." unique_id=860842843]
+offset_left = 83.0
+offset_top = 47.0
+offset_right = 174.0
+offset_bottom = 70.0
+text = "welcome to home"
+
+[node name="Label2" type="Label" parent="." unique_id=276392057]
+offset_left = 363.0
+offset_top = 116.0
+offset_right = 463.0
+offset_bottom = 157.0
+text = "start the journey
+g"
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
